@@ -42,44 +42,43 @@ header
 	border-style: solid;
 	border-width: 1px;
 	border-radius: 15px;
+	border-color: #333333;
 }
 
-/*
-Done (1) A complementary color (#333333) for text
-Done (2) A reasonable sans-serif choice for text. Be sure to use a generic family.
-Done (2) Headers should use a reasonable serif choice
-Done (2) The company name should be in bold whereever it appears.
-Done (2) The intro paragraph should be indented, other paragraphs (e.g., under Recent Customers) are not.
-Done (2) The list of services should have line spacing of 1.5.
+nav
+{
+	margin: 4px 20px;
+}
 
-Styling for the header includes:
-Done (1) A background color (#d5edb3)
-Done (3) A logo on the right side
-Done (1) The company name is centered
-Done (2) The company name uses a text shadow. I did a 3px shadow below and to the right, with a 5px blur, in color #666.
-(3) The header includes a rounded border. 
-	I used color #333333 and a 
-	border radius of 15px. 
-	The border itself is 1 px.
-	There's a shadow below the header. 
-		I did 5px below and to the right, with a 5px blur. 
-		Shadow color is #828282.
+nav a
+{
+	background-color: #d5edb3;
+	border-style: solid;
+	border-color: #333333;
+	border-width: 1px;
+	text-decoration: none;
+	font-weight: bold;
+	font-size: 20px;
+	padding: 4px 4px;	
+	margin: 0px 3px;
+}
 
-Styling for the nav menu includes:
-(1) A background color (#d5edb3)
-(1) Matching text color and border (#333333)
-(1) Border is 1 px
-(1) Links do not have underlines
-(1) Menu options are displayed in bold
-(2) The entire menu is indented to be visually appealing (~20px)
-(2) The menu "tabs" include some white space between the menu item name and the border.
-Styling for the "wrapper" and "content"
-(2) The wrapper is centered and takes 80% of the space.
-(1) The background color for the wrapper is white.
-(2) The wrapper should have rounded upper corners (otherwise the edges of the wrapper are visible above the header - try it!)
-(2) There is a minimum width set so that scroll bars will appear if the screen size gets to small. Same with height. I used 600px for the minimum width and 550 px for the minimum height. Try it!
-(2) There is some additional space between the text in the content area and the edge of the enclosing white wrapper.
-Styling for the company motto includes>
-(2) The company motto is italicized and centered.
-(3) There is a ridge border of color #98bf21 and an extra-wide left margin
-*/
+div#wrapper
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 80%;
+	background-color: white;
+	border-radius: 5px;
+	min-width: 600px;
+	min-height: 550px;
+	padding: 0px 15px;
+}
+
+p.motto
+{
+	text-align: center;
+	border-style: ridge;
+	border-color: #98bf21;
+	border-left-width: 30px;
+}
