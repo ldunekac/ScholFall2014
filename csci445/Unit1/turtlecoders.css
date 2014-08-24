@@ -43,6 +43,8 @@ header
 	border-width: 1px;
 	border-radius: 15px;
 	border-color: #333333;
+	box-shadow: 5px 5px 5px #828282;
+
 }
 
 nav
@@ -69,10 +71,14 @@ div#wrapper
 	margin-right: auto;
 	width: 80%;
 	background-color: white;
-	border-radius: 5px;
+	border-radius: 15px;
 	min-width: 600px;
 	min-height: 550px;
-	padding: 0px 15px;
+}
+
+div#content
+{
+	padding: 0px 10px;
 }
 
 p.motto
