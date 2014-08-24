@@ -1,0 +1,11 @@
+
+
+/*
+(3) The sidebar should have be in a fixed location (i.e., when you scroll the browser window, it stays in place). Use a max width so that it's approximately the size you see in the figure.
+(2) The header should be placed relative to the sidebar, so that it is not obscured.
+(1) The "shy" text should be partially hidden by the sidebar
+(3) The important text should have an absolute position so that it appears toward the top right of the screen. It should have a scrollbar.
+(2) The not-important text should not display the overflow.
+(3) The more-important text should display the overflow. BUT, it should set z-index so that it appears behind the not-important text. Use relative position so that the more-important and not-important divs overlap somewhat.
+(4) Use different colors for the four divs and another color for the text color in the sidebar div
+*/
