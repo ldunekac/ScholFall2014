@@ -1,0 +1,35 @@
+Notes for Unit 1
+
+Structure of an HTML document
+
+Purpose of DOCTYPE
+
+Use of:
+	<strong>: Defines important text or same as <b>
+	<b>: bold
+	<em>: Defines emphasized text or same as <i>
+	<i>: italic
+
+CSS:
+
+	CSS syntax (what is a selector? declaration?)
+	
+	The difference between a class and id selector font family, generic family, serif vs. sans-serif fonts
+	
+	The difference in em and pixel font size: 
+		pixel is absolute value. em is a scailable valuse
+	
+	Purpose of font-size: 100%; for body style:
+		Render the users current setting
+
+	The CSS box model:
+		Margin
+		Border
+		Pading
+		Content
+		
+	
+	consider outline vs border: http://stackoverflow.com/questions/1158515/difference-between-outline-and-border
+		Outlines do not take up space.
+		Outlines may be non-rectangular.
+		Outlines Do Not Take Up Space

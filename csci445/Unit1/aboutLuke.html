@@ -1,0 +1,82 @@
+<!--
+Luke Dunekacke
+CSCI-445
+27 Aug. 2014
+-->
+
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Luke's Boring Webpage</title>
+</head>
+
+<body>
+<h1>Luke's Boring Webpage</h1>
+
+<p><strong>Want to jump to Stuff in the page</strong></p>
+<ul>
+	<li><a href="#School">School</a></li>
+	<li><a href="#Work">Work</a></li>
+	<li><a href="#Fun">Fun</a></li>
+</ul>
+
+<h2 id="School">School</h2>
+
+<p> 
+I am a Senior at the <a href="http://www.mines.edu">Colorado School of Mines</a>
+</p>
+<p>
+	I Study Computer Science with a minor in Electeriacl Engineering. With my degree I pan to go into microcontrollers and hardware/software integration. 
+</p>
+
+<hr>
+
+<h2 id="Work">Work</h2>
+<p>
+	I currently work part time at Spectra Logic in Boulder. They specialize in mass storage on tape (Yes. It still exists). 
+</p>
+<p>
+	I am programming CAN drivers for WindowsCE. It is very challanging sinse WindowsCE is no longer supported and that there are bugs in the WindowsCE code.
+</p>
+
+<p>
+	I also work for the  <abbr title="Organization Without a Cool Acronym">OWCA</abbr>. It is important to keep my idenitiy unknown. If you need any agent work you can email me at <a href="mailto:agentL@owac.com">agentL@owac.com</a>.
+</p>
+
+<hr>
+
+<h2 id="Fun">Fun</h2>
+<p>
+	For fun I program microcontrollers. My current project is making my own Game Boy &reg; with the TI Connected Launchpad. 
+</p>
+<p>
+	If your not familiar with microcontroller code. Here is the blinking light example for the TI Connected Launchpad.
+</p>
+<p>
+<!-- code snippit -->
+#include &lt;stdint.h&gt;<br>
+#include "inc/tm4c1294ncpdt.h"<br>
+<br>
+int main(void)<br>
+{<br>
+    volatile uint32_t ui32Loop;<br><br>
+    SYSCTL_RCGCGPIO_R = SYSCTL_RCGCGPIO_R12;<br><br>
+    ui32Loop = SYSCTL_RCGCGPIO_R;<br><br>
+    GPIO_PORTN_DIR_R = 0x01;<br>
+    GPIO_PORTN_DEN_R = 0x01;<br><br>
+    while(1)<br>
+    {<br>
+        GPIO_PORTN_DATA_R |= 0x01;<br>
+        for(ui32Loop = 0; ui32Loop &lt; 200000; ui32Loop++);<br>
+        GPIO_PORTN_DATA_R &amp;= ~(0x01);<br>
+        for(ui32Loop = 0; ui32Loop &lt; 200000; ui32Loop++);<br>
+    }<br>
+}<br>
+
+</p>
+
+</body>
+
+</html>
