@@ -1,9 +1,67 @@
+/*
+	CSS3 is the animated picture in the pictureDiv
+*/
+body
+{
+	background-color: #6495ED;
+}
+
+h1
+{
+	font-family: Georgia;
+}
+
+h2
+{
+	font-family: Serif;
+}
+
+li
+{
+	font-size: 20px;
+}
+
+#chip
+{
+	background-image: url(chip.png);
+	height: 120px
+}
+
+.pictureDiv
+{
+	position: absolute;
+	top: 220px;
+	margin: 5px;
+	right: 0;
+	-webkit-animation: slide 5s;
+	animation: slide 5s;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes slide {
+    from {width: 100%}
+    to {width: 20%;}
+}
+
+div#code
+{
+	border-style: solid;
+	border-width: 3px;
+	border-color: orange;
+	background-color: white;
+	max-width: 400px;
+}
+
+.mainPoints
+{
+	color: purple;
+}
 
 /*
-(2) At least two elements with specified fonts
-(2) A repeating background image
-(2) Style one or more aspects of a div
-(2)Style one or more aspects of an element with a class selector
-(2) Style one or more aspects of an element with an id selector
-(4) Explore the CSS3 tutorials and use at least one new CSS3 feature. Put a comment in the top of your CSS file so the grader knows what feature you used.
+Done (2) At least two elements with specified fonts
+Done (2) A repeating background image
+Done (2) Style one or more aspects of a div
+Done (2)Style one or more aspects of an element with a class selector
+Done (2) Style one or more aspects of an element with an id selector
+Done (4) Explore the CSS3 tutorials and use at least one new CSS3 feature. Put a comment in the top of your CSS file so the grader knows what feature you used.
 */
