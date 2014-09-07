@@ -1,0 +1,85 @@
+<!--
+Luke Dunekacke
+-->
+
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="forms.css" />
+<title>My First Form</title>
+
+</head>
+
+<body>
+<h1>Tell Me About Yourself</h1>
+<form>
+<fieldset>
+	<legend>Basic Information</legend>
+First Name: <input type="text", name="firstname" required>
+Last Name: <input type="text", name="lastname" required>
+<br>
+Email Address: <input type="text", name="email">
+<div id="telephone">
+	Telephone (xxx-xxx-xxxx): <input type="tel" pattern="xxx-xxx-xxxx">
+</div>
+Your Password: <input type="password", maxlength="10", size="10">
+</fieldset>
+<br>
+<fieldset>
+	<legend>Random Stuff</legend>
+What Microcontroller companies do you like?
+<br>
+<input type="checkbox", name="microcontroller", value="PIC">PIC
+<br>
+<input type="checkbox", name="microcontroller", value="atmel">Atmel
+<br>
+<input type="checkbox", name="microcontroller", value="TI" checked>TI
+<br>
+<div id="pvn">
+Pirates or Ninjas?
+<br>
+<input type="radio", name="piratesWin", value="Pirate", checked> Pirates<br>
+<input type="radio", name="piratesWin", value="Ninja"> Ninja<br>
+</div>
+
+
+Please tell me more about your self<br>
+<textarea rows="5" cols="30" wrapped></textarea>
+<br>
+<br>
+<label>Pick a linux distro!</label>
+<select size="2">
+	<option value="Arch">Arch</option>
+	<optionv value="Slackware">Slackware</option>
+	<option value= "Debian">debian</option>
+	<option value="Gentoo">Gentoo</option>
+	<option value="Bogus">Bogus</option>
+</select>
+<br>
+<label>Pick a Duck!</label>
+<input list="ducks">
+<datalist id="ducks">
+	<option value="Real Duck"/>
+	<option value="Psyduck"/>
+	<option value="Gold Duck"/>
+	<option value="Donald Duck"/>
+	<option value="Rubber Duck"/>
+</datalist>
+</fieldset>
+<br>
+<fieldset>
+	<legend>Web Programming!</legend>
+How much do you like web programming?  Not at all<input type="range" 
+naime="likesWebProgramming" min="0" max="10"> Verry!<br>
+How many days did you spend programming this assignment? 
+<input type="number" min="0" value="10" size="6">
+<br>
+When did you start this assignment?
+<input type="date">
+</fieldset>
+<br>
+<br>
+<input type="submit", value="Share you Information">
+<input type="reset", value="reset">
+</form>
+</body>
+</html>

@@ -1,0 +1,89 @@
+/* applied to everyone */
+body
+{
+	font-size: 1.2em;
+}
+
+table
+{
+	max-height: 5em;
+	width: 600px;
+	margin-top: 3em;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+thead, tfoot
+{
+	text-align: center;
+}
+
+td, th, tr
+{
+	padding: 3px 3px;
+}
+
+/*
+	styles for the myschedule and refereshments table
+*/
+.same
+{
+	border: solid;
+	border-collapse: collapse;
+	border-color: orange;
+}
+
+.same td, .same tr
+{
+	border: solid;
+	border-color: orange;
+}
+
+/* myschedule table */
+
+#classes thead th
+{
+	background-color: pink;
+	border-color: orange;
+	border-style: solid;
+}
+
+/*study group*/
+#studyGroup thead
+{
+	background-color: purple;
+}
+
+#studyGroup tr:first-of-type
+{
+	font-weight: bold;
+}
+
+#studyGroup tfoot
+{
+	background-color: lightblue;
+	color: blue;
+}
+
+#studyGroup tbody tr:last-of-type td
+{
+	border-bottom: none;
+}
+
+#studyGroup tbody td
+{
+	border-bottom: dashed;
+	border-bottom-color: black;
+}
+
+/* Refreshemnts table*/
+#refreshments thead
+{
+	background-color: orange;
+}
+
+#refreshments tr:nth-of-type(even)
+{
+	background-color: pink;
+}
+

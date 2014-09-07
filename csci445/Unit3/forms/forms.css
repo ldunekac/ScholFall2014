@@ -1,0 +1,27 @@
+body
+{
+	background-color: lightblue;
+	width: 90%;
+	margin: auto;
+}
+
+fieldset
+{
+
+	border-color: orange;
+}
+
+legend
+{
+	font-size: 1.3em;
+}
+
+#pvn
+{
+	min-height: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	background: url("pvn.png") no-repeat;
+	background-size: 100px 100px;
+	background-position: 120px 0px;
+}
