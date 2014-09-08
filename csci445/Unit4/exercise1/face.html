@@ -1,0 +1,124 @@
+<!--
+Luke Dunekacke
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pirave VS Ninja</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="500" height="500" style="border:2px solid #000000; background-color: orange;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+<br>
+<button id="flipButton" type="button" onclick="Flip()">Pirate</button>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+c.addEventListener("mousedown", MouseFlip, false);
+var state = "Pirate"
+DrawPirate();
+
+function MouseFlip(event)
+{
+	var x = event.clientX;
+	var y = event.clientY;
+	var dx = x - 250;
+	var dy = y - 250;
+	if( dx*dx + dy*dy < 150*150) 
+	{
+		Flip();
+	}
+}
+
+function Flip()
+{
+	if(state == "Pirate")
+	{
+	document.getElementById("flipButton").innerHTML = "Ninja";
+	state = "Ninja"
+	DrawNinja();
+	} 
+	else
+	{
+	document.getElementById("flipButton").innerHTML = "Pirate";
+	state="Pirate"
+	DrawPirate();
+	}
+}
+
+function DrawPirate () 
+{
+	DrawBase();
+	ctx.lineWidth = 3;
+	ctx.beginPath();
+	ctx.arc(250, 630,500, 1.40*Math.PI, 1.6*Math.PI);
+	ctx.lineTo(420,100);
+	ctx.arc(250,570,500, 1.6*Math.PI,1.39*Math.PI, true);
+	ctx.lineTo(95,155);
+	ctx.fillStyle = 'black';
+	ctx.fill();
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(250,110,100,Math.PI,0);
+	ctx.fill();
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(250, 300, 80, 0, Math.PI);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.lineWidth = 10;
+	ctx.arc(200, 300, 50, 0, Math.PI, true);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(300, 300, 50, 0, Math.PI, true);
+	ctx.stroke();
+}
+
+function DrawNinja ()
+{
+	DrawBase();
+	ctx.beginPath();
+	ctx.lineWidth = 5;
+	ctx.arc(250,250,150,1.1*Math.PI,1.9*Math.PI);
+	ctx.fillStyle = 'blue';
+	ctx.fill();
+	ctx.stroke();
+
+	ctx.beginPath();
+	ctx.lineWidth = 5;
+	ctx.arc(250,250,150,Math.PI,0,true);
+	ctx.fillStyle = 'black';
+	ctx.fill();
+	ctx.stroke();
+}
+
+function DrawBase()
+{
+	ctx.beginPath();
+	ctx.clearRect(0,0,c.width, c.height);
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.lineWidth = 5;
+	ctx.fillStyle = 'white';
+	ctx.arc(250,250,150,0,2*Math.PI);
+	ctx.fill();
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(180, 210, 20, 0,2*Math.PI, false);
+	ctx.fillStyle = 'red'
+	ctx.fill();
+	ctx.stroke();
+	ctx.beginPath();
+	ctx.arc(320, 210, 20, 0,2*Math.PI, false);
+	ctx.fill();
+	ctx.stroke();
+}
+
+</script>
+
+</body>
+</html>
+
