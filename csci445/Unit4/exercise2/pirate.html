@@ -1,0 +1,54 @@
+<!--
+Luke Dunekacke
+-->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Pirave Moving</title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="600" height="500" style="border:2px solid #000000;">
+Your browser does not support the HTML5 canvas tag.
+</canvas>
+
+<script>
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+window.addEventListener("keydown", MovePicture, false);
+image = new Image();
+image.src = "pirate.JPG";
+var imageLocation = 0;
+image.onload = function()
+{
+	ctx.drawImage(image,imageLocation,0);	
+}
+
+function MovePicture(event)
+{
+	ctx.beginPath();
+	ctx.clearRect(0,0,c.width, c.height);
+	ctx.stroke();
+	switch(event.keyCode)
+	{
+		case 37: // left key pressed
+			if(imageLocation != 0)
+			{
+				imageLocation = imageLocation - 10;
+			}
+			break;
+		case 39: // right key pressed
+			if(imageLocation + image.width < c.width)
+			{
+			imageLocation = imageLocation + 10;
+			}
+			break;
+	}
+	ctx.drawImage(image, imageLocation,0);
+}
+
+</script>
+
+</body>
+</html>
+
