@@ -1,0 +1,6 @@
+pic, .30
+arduino, 15.00
+launchpad, 12.00
+atmel, .90
+stm32, 1.85
+somethig else, 100.00
